@@ -1,4 +1,16 @@
 import { Form } from "@remix-run/react";
+import type { LinksFunction } from '@remix-run/node';
+import stylesUrl from '~/styles/competidaily.css';
+import resetCssUrl from '~/styles/reset.css';
+
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: 'stylesheet', href: stylesUrl }, 
+    { rel: 'stylesheet', href: resetCssUrl }, 
+  ];
+};
+
 const PocketBase = require('pocketbase/cjs');
 
 export async function action({ request }) {
@@ -18,17 +30,13 @@ export async function action({ request }) {
 export default function NewCompetidailyRoute() {
     return (
       <div>
-        <p>Sugira um novo tema!</p>
+        <h1>Sugira um novo tema!</h1>
         <Form method="post">
-          <div>
-            <label>
-              Seu nome: <input type="text" name="name" />
-            </label>
+          <div className='input-container'>
+            <input placeholder='Seu nome...' type="text" name="name" />
           </div>
-          <div>
-            <label>
-              Um tema bem legal*: <textarea name="content" />
-            </label>
+          <div className='input-container'>
+          <textarea placeholder='Sugestão de tema...' name="content" />
           </div>
           <div>
             <button type="submit" className="button">

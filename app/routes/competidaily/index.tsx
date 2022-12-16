@@ -1,5 +1,16 @@
 import { useLoaderData } from '@remix-run/react';
+import type { LinksFunction } from '@remix-run/node';
+import stylesUrl from '~/styles/competidaily.css';
+import resetCssUrl from '~/styles/reset.css';
+
 const PocketBase = require('pocketbase/cjs');
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: 'stylesheet', href: stylesUrl }, 
+    { rel: 'stylesheet', href: resetCssUrl }, 
+  ];
+};
 
 export const loader = async () => {
   const pb = new PocketBase(process.env.POCKET_BASE_URL);
@@ -10,33 +21,36 @@ export const loader = async () => {
       sort: '-created',
     })
 
-  return { records };
+    const allThemes = records;
+    const filteredThemes: any = []
+
+    allThemes.map((item: any) => {
+      if (item.enabled) {
+        return filteredThemes.push(item)
+      }
+      return null;
+    })
+
+    console.log('PERMITIDOS >>>', filteredThemes)
+    console.log('TODOS OS TEMAS >>>', allThemes)
+
+    const min = Math.ceil(1);
+    const max = Math.floor(filteredThemes.length);
+    const randomIndex = Math.floor(Math.random() * (max - min) + min);
+    const chosenTheme = filteredThemes[randomIndex]
+
+    console.log('index >>>>', randomIndex)
+    console.log('chosenTheme >>>>', chosenTheme)
+
+  return { chosenTheme };
 };
 
 export default function CompetidailyIndexRoute() {
     const data = useLoaderData();
 
-    const getEnabledThemes = () => {
-      const allThemes = data.records;
-      const filteredThemes: any = []
-
-      allThemes.map((item: any) => {
-        if (item.enabled) {
-          return filteredThemes.push(item)
-        }
-        return null;
-      })
-
-      console.log('PERMITIDOS >>>', filteredThemes)
-      console.log('TODOS OS TEMAS >>>', allThemes)
-
-
-      return filteredThemes
-    }
-
     return (
       <div>
-        Seu tema é: {getEnabledThemes().map((item: any) => <p key={item.theme}>{item.theme}</p>)}
+        <p>Seu tema é: <blockquote key={data.chosenTheme.theme}>{data.chosenTheme.theme}</blockquote></p>
       </div>
     );
   }
