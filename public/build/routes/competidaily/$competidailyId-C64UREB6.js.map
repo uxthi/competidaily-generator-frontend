@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/competidaily/$competidailyId.tsx"],
+  "sourcesContent": ["export default function CompetidailyRoute() {\n    return (\n      <div>\n        <p>Aqui vai um novo tema</p>\n        <p>\n          Lorem ipsum um tema gerado\n        </p>\n      </div>\n    );\n  }"],
+  "mappings": ";;;;;;AAGQ;AAHO,SAAR,oBAAqC;AACxC,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAAwB;AAAA,MACxB,mDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA;AAAA,KAJF;AAAA;AAAA;AAAA;AAAA,SAKA;AAEJ;",
+  "names": []
+}

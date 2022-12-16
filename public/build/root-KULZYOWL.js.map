@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../app/root.tsx"],
+  "sourcesContent": ["import { LiveReload } from \"@remix-run/react\";\n\nexport default function App() {\n  return (\n    <html lang=\"en\">\n      <head>\n        <meta charSet=\"utf-8\" />\n        <title>Gere uma competidaily aleat\u00F3ria pra sua equipe!</title>\n      </head>\n      <body>\n        Hello world\n        {/* The <LiveReload /> component is useful during development to auto-refresh the browser whenever we make a change. */}\n        <LiveReload />\n      </body>\n    </html>\n  );\n}"],
+  "mappings": ";;;;;;;;;AAMQ;AAJO,SAAR,MAAuB;AAC5B,SACE,mDAAC;AAAA,IAAK,MAAK;AAAA,IACT;AAAA,yDAAC;AAAA,QACC;AAAA,6DAAC;AAAA,YAAK,SAAQ;AAAA,aAAd;AAAA;AAAA;AAAA;AAAA,iBAAsB;AAAA,UACtB,mDAAC;AAAA,YAAM;AAAA,aAAP;AAAA;AAAA;AAAA;AAAA,iBAAsD;AAAA;AAAA,SAFxD;AAAA;AAAA;AAAA;AAAA,aAGA;AAAA,MACA,mDAAC;AAAA,QAAK;AAAA;AAAA,UAGJ,mDAAC,gBAAD;AAAA;AAAA;AAAA;AAAA,iBAAY;AAAA;AAAA,SAHd;AAAA;AAAA;AAAA;AAAA,aAIA;AAAA;AAAA,KATF;AAAA;AAAA;AAAA;AAAA,SAUA;AAEJ;",
+  "names": []
+}

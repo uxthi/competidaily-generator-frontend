@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/index.tsx"],
+  "sourcesContent": ["export default function IndexRoute() {\n    return <div>Essa \u00E9 a rota index</div>;\n  }"],
+  "mappings": ";;;;;;;;AACW;AADI,SAAR,aAA8B;AACjC,SAAO,mDAAC;AAAA,IAAI;AAAA,KAAL;AAAA;AAAA;AAAA;AAAA,SAAwB;AACjC;",
+  "names": []
+}

@@ -1,0 +1,1 @@
+window.__remixManifest={"version":"3bf027dc","entry":{"module":"/build/entry.client-DPEAZZEW.js","imports":["/build/_shared/chunk-DN5U25BC.js"]},"routes":{"root":{"id":"root","path":"","module":"/build/root-JD3SDB46.js","hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false}},"url":"/build/manifest-3BF027DC.js"};
