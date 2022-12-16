@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/routes/new-theme.tsx"],
-  "sourcesContent": ["import { Outlet } from \"@remix-run/react\";\n\nexport default function JokesRoute() {\n  return (\n    <div>\n      <h1>Sugira um novo tema!</h1>\n      <main>\n        <Outlet />\n      </main>\n    </div>\n  );\n}"],
-  "mappings": ";;;;;;;;;AAKM;AAHS,SAAR,aAA8B;AACnC,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAG;AAAA,SAAJ;AAAA;AAAA;AAAA;AAAA,aAAwB;AAAA,MACxB,mDAAC;AAAA,QACC,6DAAC,YAAD;AAAA;AAAA;AAAA;AAAA,eAAQ;AAAA,SADV;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA;AAAA,KAJF;AAAA;AAAA;AAAA;AAAA,SAKA;AAEJ;",
-  "names": []
-}

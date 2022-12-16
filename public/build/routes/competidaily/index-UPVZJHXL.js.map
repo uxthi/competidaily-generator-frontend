@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/routes/competidaily/index.jsx"],
-  "sourcesContent": ["export default function JokesIndexRoute() {\n    return (\n      <div>\n        <p>Here's a random joke:</p>\n        <p>\n          I was wondering why the frisbee was getting bigger,\n          then it hit me.\n        </p>\n      </div>\n    );\n  }"],
-  "mappings": ";;;;;;AAGQ;AAHO,SAAR,kBAAmC;AACtC,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAAwB;AAAA,MACxB,mDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAGA;AAAA;AAAA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;",
-  "names": []
-}

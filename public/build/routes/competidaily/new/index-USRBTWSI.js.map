@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../app/routes/competidaily/new/index.tsx"],
-  "sourcesContent": ["export default function NewCompetidailyRoute() {\n    return (\n      <div>\n        <p>Sugira um novo tema!</p>\n        <form method=\"post\">\n          <div>\n            <label>\n              Seu nome: <input type=\"text\" name=\"name\" />\n            </label>\n          </div>\n          <div>\n            <label>\n              Um tema bem legal*: <textarea name=\"content\" />\n            </label>\n          </div>\n          <div>\n            <button type=\"submit\" className=\"button\">\n              Add\n            </button>\n          </div>\n        </form>\n      </div>\n    );\n  }"],
-  "mappings": ";;;;;;AAGQ;AAHO,SAAR,uBAAwC;AAC3C,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAAuB;AAAA,MACvB,mDAAC;AAAA,QAAK,QAAO;AAAA,QACX;AAAA,6DAAC;AAAA,YACC,6DAAC;AAAA,cAAM;AAAA;AAAA,gBACK,mDAAC;AAAA,kBAAM,MAAK;AAAA,kBAAO,MAAK;AAAA,mBAAxB;AAAA;AAAA;AAAA;AAAA,uBAA+B;AAAA;AAAA,eAD3C;AAAA;AAAA;AAAA;AAAA,mBAEA;AAAA,aAHF;AAAA;AAAA;AAAA;AAAA,iBAIA;AAAA,UACA,mDAAC;AAAA,YACC,6DAAC;AAAA,cAAM;AAAA;AAAA,gBACe,mDAAC;AAAA,kBAAS,MAAK;AAAA,mBAAf;AAAA;AAAA;AAAA;AAAA,uBAAyB;AAAA;AAAA,eAD/C;AAAA;AAAA;AAAA;AAAA,mBAEA;AAAA,aAHF;AAAA;AAAA;AAAA;AAAA,iBAIA;AAAA,UACA,mDAAC;AAAA,YACC,6DAAC;AAAA,cAAO,MAAK;AAAA,cAAS,WAAU;AAAA,cAAS;AAAA,eAAzC;AAAA;AAAA;AAAA;AAAA,mBAEA;AAAA,aAHF;AAAA;AAAA;AAAA;AAAA,iBAIA;AAAA;AAAA,SAfF;AAAA;AAAA;AAAA;AAAA,aAgBA;AAAA;AAAA,KAlBF;AAAA;AAAA;AAAA;AAAA,SAmBA;AAEJ;",
-  "names": []
-}

@@ -1,6 +1,7 @@
 {
   "private": true,
   "sideEffects": false,
+  "type": "commonjs",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
@@ -12,6 +13,7 @@
     "@remix-run/react": "^1.8.2",
     "@remix-run/serve": "^1.8.2",
     "isbot": "^3.6.5",
+    "pocketbase": "^0.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -20,10 +22,13 @@
     "@remix-run/eslint-config": "^1.8.2",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
-    "eslint": "^8.27.0",
+    "eslint": "^8.29.0",
     "typescript": "^4.8.4"
   },
   "engines": {
     "node": ">=14"
+  },
+  "compilerOptions": {
+    "module": "esnext"
   }
 }

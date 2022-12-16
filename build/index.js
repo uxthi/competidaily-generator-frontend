@@ -3,6 +3,9 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf, __hasOwnProp = Object.prototype.hasOwnProperty;
+var __commonJS = (cb, mod) => function() {
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: !0 });
@@ -16,6 +19,13 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: !0 }) : target,
   mod
 )), __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: !0 }), mod);
+
+// app/styles/index.css
+var require_styles = __commonJS({
+  "app/styles/index.css"(exports, module2) {
+    module2.exports = "/build/_assets/index-P4OX6PNN.css";
+  }
+});
 
 // <stdin>
 var stdin_exports = {};
@@ -138,6 +148,11 @@ function App() {
             fileName: "app/root.tsx",
             lineNumber: 8,
             columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Links, {}, void 0, !1, {
+            fileName: "app/root.tsx",
+            lineNumber: 9,
+            columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
@@ -149,7 +164,7 @@ function App() {
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 11,
+            lineNumber: 12,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.LiveReload, {}, void 0, !1, {
@@ -160,7 +175,7 @@ function App() {
         ]
       }, void 0, !0, {
         fileName: "app/root.tsx",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 7
       }, this)
     ]
@@ -181,7 +196,7 @@ function CompetidailyRoute() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", {
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", {
-        children: "A competidaily aleat\xF3ria do dia"
+        children: "Gerador de Competidaily v2.0"
       }, void 0, !1, {
         fileName: "app/routes/competidaily.tsx",
         lineNumber: 6,
@@ -206,126 +221,105 @@ function CompetidailyRoute() {
   }, this);
 }
 
-// app/routes/competidaily/$competidailyId.tsx
-var competidailyId_exports = {};
-__export(competidailyId_exports, {
-  default: () => CompetidailyRoute2
-});
-var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
-function CompetidailyRoute2() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("p", {
-        children: "Aqui vai um novo tema"
-      }, void 0, !1, {
-        fileName: "app/routes/competidaily/$competidailyId.tsx",
-        lineNumber: 4,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("p", {
-        children: "Lorem ipsum um tema gerado"
-      }, void 0, !1, {
-        fileName: "app/routes/competidaily/$competidailyId.tsx",
-        lineNumber: 5,
-        columnNumber: 9
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/routes/competidaily/$competidailyId.tsx",
-    lineNumber: 3,
-    columnNumber: 7
-  }, this);
-}
-
 // app/routes/competidaily/new/index.tsx
 var new_exports = {};
 __export(new_exports, {
+  action: () => action,
   default: () => NewCompetidailyRoute
 });
-var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+var import_react4 = require("@remix-run/react"), import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), PocketBase = require("pocketbase/cjs");
+async function action({ request }) {
+  let body = await request.formData(), pb = new PocketBase(process.env.POCKET_BASE_URL);
+  await pb.admins.authWithPassword(process.env.POCKET_BASE_USER, process.env.POCKET_BASE_PASS);
+  let records = await pb.collection(process.env.POCKET_BASE_COLLECTION).create({
+    theme: body.get("content"),
+    enabled: !1
+  });
+  return null;
+}
 function NewCompetidailyRoute() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("p", {
         children: "Sugira um novo tema!"
       }, void 0, !1, {
         fileName: "app/routes/competidaily/new/index.tsx",
-        lineNumber: 4,
+        lineNumber: 21,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("form", {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Form, {
         method: "post",
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("label", {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("label", {
               children: [
                 "Seu nome: ",
-                /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("input", {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("input", {
                   type: "text",
                   name: "name"
                 }, void 0, !1, {
                   fileName: "app/routes/competidaily/new/index.tsx",
-                  lineNumber: 8,
+                  lineNumber: 25,
                   columnNumber: 25
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/competidaily/new/index.tsx",
-              lineNumber: 7,
+              lineNumber: 24,
               columnNumber: 13
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/competidaily/new/index.tsx",
-            lineNumber: 6,
+            lineNumber: 23,
             columnNumber: 11
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("label", {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("label", {
               children: [
                 "Um tema bem legal*: ",
-                /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("textarea", {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("textarea", {
                   name: "content"
                 }, void 0, !1, {
                   fileName: "app/routes/competidaily/new/index.tsx",
-                  lineNumber: 13,
+                  lineNumber: 30,
                   columnNumber: 35
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/competidaily/new/index.tsx",
-              lineNumber: 12,
+              lineNumber: 29,
               columnNumber: 13
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/competidaily/new/index.tsx",
-            lineNumber: 11,
+            lineNumber: 28,
             columnNumber: 11
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("button", {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", {
               type: "submit",
               className: "button",
               children: "Enviar"
             }, void 0, !1, {
               fileName: "app/routes/competidaily/new/index.tsx",
-              lineNumber: 17,
+              lineNumber: 34,
               columnNumber: 13
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/competidaily/new/index.tsx",
-            lineNumber: 16,
+            lineNumber: 33,
             columnNumber: 11
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/competidaily/new/index.tsx",
-        lineNumber: 5,
+        lineNumber: 22,
         columnNumber: 9
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/routes/competidaily/new/index.tsx",
-    lineNumber: 3,
+    lineNumber: 20,
     columnNumber: 7
   }, this);
 }
@@ -333,30 +327,34 @@ function NewCompetidailyRoute() {
 // app/routes/competidaily/index.tsx
 var competidaily_exports2 = {};
 __export(competidaily_exports2, {
-  default: () => CompetidailyIndexRoute
+  default: () => CompetidailyIndexRoute,
+  loader: () => loader
 });
-var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
+var import_react5 = require("@remix-run/react"), import_jsx_dev_runtime5 = require("react/jsx-dev-runtime"), PocketBase2 = require("pocketbase/cjs"), loader = async () => {
+  let pb = new PocketBase2(process.env.POCKET_BASE_URL);
+  return await pb.admins.authWithPassword(process.env.POCKET_BASE_USER, process.env.POCKET_BASE_PASS), { records: await pb.collection(process.env.POCKET_BASE_COLLECTION).getFullList(200, {
+    sort: "-created"
+  }) };
+};
 function CompetidailyIndexRoute() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
+  let data = (0, import_react5.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", {
-        children: "Olha que legal"
-      }, void 0, !1, {
+      "Seu tema \xE9: ",
+      (() => {
+        let allThemes = data.records, filteredThemes = [];
+        return allThemes.map((item) => item.enabled ? filteredThemes.push(item) : null), console.log("PERMITIDOS >>>", filteredThemes), console.log("TODOS OS TEMAS >>>", allThemes), filteredThemes;
+      })().map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", {
+        children: item.theme
+      }, item.theme, !1, {
         fileName: "app/routes/competidaily/index.tsx",
-        lineNumber: 4,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", {
-        children: "Essa rota ta nested dentro da rota da competidaily"
-      }, void 0, !1, {
-        fileName: "app/routes/competidaily/index.tsx",
-        lineNumber: 5,
-        columnNumber: 9
-      }, this)
+        lineNumber: 39,
+        columnNumber: 60
+      }, this))
     ]
   }, void 0, !0, {
     fileName: "app/routes/competidaily/index.tsx",
-    lineNumber: 3,
+    lineNumber: 38,
     columnNumber: 7
   }, this);
 }
@@ -364,21 +362,22 @@ function CompetidailyIndexRoute() {
 // app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
-  default: () => IndexRoute
+  default: () => IndexRoute,
+  links: () => links
 });
-var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
+var import_styles = __toESM(require_styles()), import_jsx_dev_runtime6 = require("react/jsx-dev-runtime"), links = () => [{ rel: "stylesheet", href: import_styles.default }];
 function IndexRoute() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h1", {
     children: "Essa \xE9 a rota index"
   }, void 0, !1, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 2,
-    columnNumber: 12
+    lineNumber: 10,
+    columnNumber: 10
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "6d2cf0ec", entry: { module: "/build/entry.client-GFNYVX2U.js", imports: ["/build/_shared/chunk-2C6XKM62.js", "/build/_shared/chunk-DDCATEM7.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OE7UGS2V.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily": { id: "routes/competidaily", parentId: "root", path: "competidaily", index: void 0, caseSensitive: void 0, module: "/build/routes/competidaily-O3C744A6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily/$competidailyId": { id: "routes/competidaily/$competidailyId", parentId: "routes/competidaily", path: ":competidailyId", index: void 0, caseSensitive: void 0, module: "/build/routes/competidaily/$competidailyId-C64UREB6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily/index": { id: "routes/competidaily/index", parentId: "routes/competidaily", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/competidaily/index-DKBDTV2B.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily/new/index": { id: "routes/competidaily/new/index", parentId: "routes/competidaily", path: "new", index: !0, caseSensitive: void 0, module: "/build/routes/competidaily/new/index-7GODPI2P.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-C24IQICK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-6D2CF0EC.js" };
+var assets_manifest_default = { version: "9c53a7bc", entry: { module: "/build/entry.client-N54WHGEN.js", imports: ["/build/_shared/chunk-LMFGQVYC.js", "/build/_shared/chunk-FOXTB3PS.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-B3BX5WX4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily": { id: "routes/competidaily", parentId: "root", path: "competidaily", index: void 0, caseSensitive: void 0, module: "/build/routes/competidaily-73OZGA3Q.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily/index": { id: "routes/competidaily/index", parentId: "routes/competidaily", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/competidaily/index-FZPIMCZW.js", imports: ["/build/_shared/chunk-I6LSXOVY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/competidaily/new/index": { id: "routes/competidaily/new/index", parentId: "routes/competidaily", path: "new", index: !0, caseSensitive: void 0, module: "/build/routes/competidaily/new/index-4LTV3BEP.js", imports: ["/build/_shared/chunk-I6LSXOVY.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-RBNKUTNV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-9C53A7BC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -397,14 +396,6 @@ var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath 
     index: void 0,
     caseSensitive: void 0,
     module: competidaily_exports
-  },
-  "routes/competidaily/$competidailyId": {
-    id: "routes/competidaily/$competidailyId",
-    parentId: "routes/competidaily",
-    path: ":competidailyId",
-    index: void 0,
-    caseSensitive: void 0,
-    module: competidailyId_exports
   },
   "routes/competidaily/new/index": {
     id: "routes/competidaily/new/index",
