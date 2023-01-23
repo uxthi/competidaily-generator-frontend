@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
+import GlobalStyle from "../styles/global";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -15,6 +16,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <title>Gerador de Competidaily</title>
       </Head>
       <Component {...pageProps} />
+      <GlobalStyle />
     </ThemeProvider>
   );
 };

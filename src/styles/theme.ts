@@ -37,8 +37,12 @@ const themes = {
       fixed: '1508px',
     },
     colors: {
-      primary: '#02032C',
-      secondary: '#212286',
+      lupino: '#333399',
+      jasmin: '#fafafa',
+      caralluma: '#333333',
+      dahlia: '#ff6666',
+      agapanto: '#dfe1ec',
+      jade: '#33cccc',
       infoSuccess: {
         primary: '#214739',
         secondary: '#66b79a',
@@ -51,7 +55,6 @@ const themes = {
         primary: '#ee5135',
         secondary: '#3d1b1b',
       },
-      background: '#f2f5f9',
     },
     font: {
       size: {
