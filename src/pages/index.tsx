@@ -6,12 +6,18 @@ import {
   TextWrapper,
   Button,
   StyledInput,
-  SecondaryButton,
   ButtonWrapper,
 } from "../styles/views/index";
-import React from "react";
+import React, { useState } from "react";
 
 const Home: React.FC = () => {
+  const [theme, setTheme] = useState<string>("Testando tema");
+
+  const handleButtonClick = (e: any) => {
+    console.log("clicou >", e);
+    setTheme("Clicou, testando tema 2");
+  };
+
   return (
     <Container>
       <TextWrapper>
@@ -19,15 +25,14 @@ const Home: React.FC = () => {
           competi<DahliaColor>DAILY</DahliaColor>
         </Title>
         <SubTitle>
-          <DahliaColor>Pequenos</DahliaColor> desafios pra{" "}
+          <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
           <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
         </SubTitle>
       </TextWrapper>
       <ButtonWrapper>
-        <Button>Login</Button>
-        <SecondaryButton>Sortear tema</SecondaryButton>
+        <Button onClick={handleButtonClick}>Sortear tema</Button>
       </ButtonWrapper>
-      <StyledInput />
+      <StyledInput readOnly value={theme} />
     </Container>
   );
 };
