@@ -9,13 +9,15 @@ import {
   ButtonWrapper,
 } from "../styles/views/index";
 import React, { useState } from "react";
+import getRandomTheme from "services/themes/get/getThemes";
 
 const Home: React.FC = () => {
-  const [theme, setTheme] = useState<string>("Testando tema");
+  const [theme, setTheme] = useState<string>("Sorteie um tema!");
 
-  const handleButtonClick = (e: any) => {
-    console.log("clicou >", e);
-    setTheme("Clicou, testando tema 2");
+  const handleButtonClick = async (e: any) => {
+    const theme = await getRandomTheme();
+
+    setTheme(theme);
   };
 
   return (

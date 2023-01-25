@@ -100,22 +100,36 @@ const ButtonWrapper = styled.div`
   gap: 20px;
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled.textarea`
   background: white;
-  color: darkgray;
-  width: 50%;
+  color: ${({ theme }) => theme.colors.caralluma};
+  width: fit-content;
+  min-width: 50%;
   min-height: 50px;
+  height: fit-content;
   border: none;
   border-radius: 5px;
   padding: 10px;
+  font-size: 1.3rem;
 
   &:focus {
     outline: none;
   }
 
+  @media (max-width: 1024px) {
+    height: 100px;
+  }
 
   @media (max-width: 768px) {
-    width: 80%;
+    height: 100px;
+  }
+
+  @media (max-width: 480px) {
+    height: 150px;
+  }
+
+  @media (max-width: 320px) {
+    height: 200px;
   }
 `;
 
