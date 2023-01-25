@@ -6,13 +6,14 @@ import {
   TextWrapper,
   Button,
   StyledInput,
-  ButtonWrapper,
+  Wrapper,
+  Footer,
 } from "../styles/views/index";
 import React, { useState } from "react";
 import getRandomTheme from "services/themes/get/getThemes";
 
 const Home: React.FC = () => {
-  const [theme, setTheme] = useState<string>("Sorteie um tema!");
+  const [theme, setTheme] = useState<string>("");
 
   const handleButtonClick = async (e: any) => {
     const theme = await getRandomTheme();
@@ -22,19 +23,28 @@ const Home: React.FC = () => {
 
   return (
     <Container>
-      <TextWrapper>
-        <Title>
-          competi<DahliaColor>DAILY</DahliaColor>
-        </Title>
-        <SubTitle>
-          <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
-          <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
-        </SubTitle>
-      </TextWrapper>
-      <ButtonWrapper>
+      <Wrapper>
+        <TextWrapper>
+          <Title>
+            competi<DahliaColor>DAILY</DahliaColor>
+          </Title>
+          <SubTitle>
+            <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
+            <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
+          </SubTitle>
+        </TextWrapper>
+      </Wrapper>
+
+      <Wrapper>
         <Button onClick={handleButtonClick}>Sortear tema</Button>
-      </ButtonWrapper>
-      <StyledInput readOnly value={theme} />
+        <StyledInput readOnly placeholder="Sorteie um tema..." value={theme} />
+      </Wrapper>
+
+      <Wrapper>
+        <Footer>
+          <small>BETA TEST</small>
+        </Footer>
+      </Wrapper>
     </Container>
   );
 };
