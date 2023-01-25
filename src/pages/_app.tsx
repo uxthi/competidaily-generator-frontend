@@ -15,7 +15,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <link rel="stylesheet" href="/content/normalize.css" />
         <link rel="stylesheet" href="/content/common.css" />
         <link rel="icon" href="/content/images/favicon.png" />
-        <title>Gerador de Competidaily</title>
+        <title>Gerador de Competidaily - (beta)</title>
       </Head>
       <Component {...pageProps} />
       <GlobalStyle />
