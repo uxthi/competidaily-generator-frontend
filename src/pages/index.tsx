@@ -8,17 +8,21 @@ import {
   StyledInput,
   Wrapper,
   Footer,
+  Spinner,
 } from "../styles/views/index";
 import React, { useState } from "react";
 import getRandomTheme from "services/themes/get/getThemes";
 
 const Home: React.FC = () => {
   const [theme, setTheme] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleButtonClick = async (e: any) => {
+    setLoading(true);
     const theme = await getRandomTheme();
 
     setTheme(theme);
+    setLoading(false);
   };
 
   return (
@@ -36,7 +40,11 @@ const Home: React.FC = () => {
       </Wrapper>
 
       <Wrapper>
-        <Button onClick={handleButtonClick}>Sortear tema</Button>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <Button onClick={handleButtonClick}>Sortear tema</Button>
+        )}
         <StyledInput readOnly placeholder="Sorteie um tema..." value={theme} />
       </Wrapper>
 
