@@ -121,48 +121,4 @@ const Wrapper = styled.div`
   gap: 20px;
 `
 
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  bottom: 0;
-  background-color: ${({ theme }) => theme.colors.dahlia};
-
-  @media (max-width: 768px) {
-    height: 50px;
-  }
-`
-
-const Spinner = styled.div`
-  width: 30px;
-  height: 30px;
-  margin: 10px 0;
-
-  ::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 6px solid ${({ theme }) => theme.colors.jasmin};
-    border-color: #fff transparent #fff transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-  }
-
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-    transform: rotate(360deg);
-    }
-  }
-
-`
-
-
-export { Spinner, Footer, Wrapper, Container, Title,SubTitle, DahliaColor, TextWrapper, Button, StyledInput };
+export { Wrapper, Container, Title,SubTitle, DahliaColor, TextWrapper, Button, StyledInput };
