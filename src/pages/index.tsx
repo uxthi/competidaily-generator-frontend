@@ -7,11 +7,11 @@ import {
   Button,
   StyledInput,
   Wrapper,
-  Footer,
-  Spinner,
 } from "../styles/views/index";
 import React, { useState } from "react";
 import getRandomTheme from "services/themes/get/getThemes";
+import Footer from "@/components/Footer";
+import Spinner from "@/components/Spinner";
 
 const Home: React.FC = () => {
   const [theme, setTheme] = useState<string>("");
@@ -49,9 +49,7 @@ const Home: React.FC = () => {
       </Wrapper>
 
       <Wrapper>
-        <Footer>
-          <small>BETA TEST</small>
-        </Footer>
+        <Footer />
       </Wrapper>
     </Container>
   );
