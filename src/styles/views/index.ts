@@ -4,32 +4,20 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   min-height: 100vh;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.lupino};
 `;
 
-const TextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`
-
 const Title = styled.h1`
   font-size: 6rem;
   color: ${({ theme }) => theme.colors.jasmin};
-  padding: 0;
   font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
   @media (max-width: 768px) {
     font-size: 5rem;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 480px) {
@@ -70,7 +58,11 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: 1.3rem;
   font-weight: 600;
+  cursor: pointer;
 
+  &:hover {
+    background: linear-gradient(90deg, rgba(255,74,74,1) 35%, rgba(255,102,102,1) 100%);
+  }
 
   @media (max-width: 320px) {
     font-size: 1.2rem;
@@ -85,7 +77,7 @@ const StyledInput = styled.textarea`
   width: fit-content;
   min-width: 50%;
   min-height: 50px;
-  height: fit-content;
+  height: 15vh;
   border: none;
   border-radius: 5px;
   padding: 15px;
@@ -95,20 +87,16 @@ const StyledInput = styled.textarea`
     outline: none;
   }
 
-  @media (max-width: 1024px) {
-    height: 100px;
-  }
-
   @media (max-width: 768px) {
-    height: 100px;
+    height: 20vh;
   }
 
   @media (max-width: 480px) {
-    height: 150px;
+    height: 30vh;
   }
 
   @media (max-width: 320px) {
-    height: 200px;
+    height: 30vh;
   }
 `;
 
@@ -119,6 +107,11 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   gap: 20px;
+  height: 50vh;
+
+  :last-child {
+    justify-content: flex-start;
+  }
 `
 
-export { Wrapper, Container, Title,SubTitle, DahliaColor, TextWrapper, Button, StyledInput };
+export { Wrapper, Container, Title,SubTitle, DahliaColor, Button, StyledInput };

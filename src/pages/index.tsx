@@ -3,7 +3,6 @@ import {
   Title,
   SubTitle,
   DahliaColor,
-  TextWrapper,
   Button,
   StyledInput,
   Wrapper,
@@ -28,15 +27,13 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Wrapper>
-        <TextWrapper>
-          <Title>
-            competi<DahliaColor>DAILY</DahliaColor>
-          </Title>
-          <SubTitle>
-            <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
-            <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
-          </SubTitle>
-        </TextWrapper>
+        <Title>
+          competi<DahliaColor>DAILY</DahliaColor>
+        </Title>
+        <SubTitle>
+          <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
+          <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
+        </SubTitle>
       </Wrapper>
 
       <Wrapper>
@@ -46,10 +43,6 @@ const Home: React.FC = () => {
           <Button onClick={handleButtonClick}>Sortear tema</Button>
         )}
         <StyledInput readOnly placeholder="Sorteie um tema..." value={theme} />
-      </Wrapper>
-
-      <Wrapper>
-        <Footer />
       </Wrapper>
     </Container>
   );
