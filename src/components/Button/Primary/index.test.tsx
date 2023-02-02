@@ -1,5 +1,4 @@
 import { render, fireEvent } from "@testing-library/react";
-import { describe } from "node:test";
 import Button from ".";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles/theme";
