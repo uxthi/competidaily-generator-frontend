@@ -3,25 +3,25 @@ import {
   Title,
   SubTitle,
   DahliaColor,
-  Button,
   StyledInput,
   Wrapper,
 } from "../styles/views/index";
 import React, { useState } from "react";
 import getRandomTheme from "services/themes/get/getThemes";
-import Footer from "@/components/Footer";
-import Spinner from "@/components/Spinner";
+import Spinner from "components/Spinner";
+import Button from "components/Button/Primary";
+import { MouseEventHandler } from "react";
 
 const Home: React.FC = () => {
   const [theme, setTheme] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleButtonClick = async (e: any) => {
-    setLoading(true);
+  const handleButtonClick = async () => {
+    setIsLoading(true);
     const theme = await getRandomTheme();
 
     setTheme(theme);
-    setLoading(false);
+    setIsLoading(false);
   };
 
   return (
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       </Wrapper>
 
       <Wrapper>
-        {loading ? (
+        {isLoading ? (
           <Spinner />
         ) : (
           <Button onClick={handleButtonClick}>Sortear tema</Button>
