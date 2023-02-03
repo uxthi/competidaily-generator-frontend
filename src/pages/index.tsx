@@ -10,7 +10,6 @@ import React, { useState } from "react";
 import getRandomTheme from "services/themes/get/getThemes";
 import Spinner from "components/Spinner";
 import Button from "components/Button/Primary";
-import { MouseEventHandler } from "react";
 
 const Home: React.FC = () => {
   const [theme, setTheme] = useState<string>("");
