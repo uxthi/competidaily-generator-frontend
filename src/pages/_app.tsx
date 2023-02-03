@@ -4,14 +4,13 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../styles/theme";
 import GlobalStyle from "../styles/global";
-import Script from "next/script";
-import getConfig from "next/config";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Gerador de Competidaily!" />
         <link rel="preload" href="/content/normalize.css" as="style" />
         <link rel="preload" href="/content/common.css" as="style" />
         <link rel="icon" href="/content/images/favicon.png" />

@@ -29,7 +29,7 @@ const Title = styled.h1`
   }
 `
 
-const SubTitle = styled.h3`
+const SubTitle = styled.h2`
   font-size: 2rem;
   text-align: center;
   justify-content: center;
@@ -45,8 +45,8 @@ const SubTitle = styled.h3`
   }
 `
 
-const DahliaColor = styled.span`
-  color: ${({ theme }) => theme.colors.dahlia};
+const JadeText = styled.span`
+  color: ${({ theme }) => theme.colors.jade};
 `
 
 const StyledInput = styled.textarea`
@@ -92,4 +92,4 @@ const Wrapper = styled.div`
   }
 `
 
-export { Wrapper, Container, Title,SubTitle, DahliaColor, StyledInput };
+export { Wrapper, Container, Title,SubTitle, JadeText, StyledInput };
