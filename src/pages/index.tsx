@@ -2,7 +2,7 @@ import {
   Container,
   Title,
   SubTitle,
-  DahliaColor,
+  JadeText,
   StyledInput,
   Wrapper,
 } from "../styles/views/index";
@@ -27,11 +27,11 @@ const Home: React.FC = () => {
     <Container>
       <Wrapper>
         <Title>
-          competi<DahliaColor>DAILY</DahliaColor>
+          competi<JadeText>DAILY</JadeText>
         </Title>
         <SubTitle>
-          <DahliaColor>pequenos</DahliaColor> desafios pra{" "}
-          <DahliaColor>estimular</DahliaColor> a criatividade da sua equipe!
+          <JadeText>pequenos</JadeText> desafios pra{" "}
+          <JadeText>estimular</JadeText> a criatividade da sua equipe!
         </SubTitle>
       </Wrapper>
 
