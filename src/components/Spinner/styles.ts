@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 30px;
   height: 30px;
-  margin: 10px 0;
+  margin-bottom: 10px;
 
   ::after {
     content: "";
@@ -12,7 +12,7 @@ const Container = styled.div`
     height: 30px;
     border-radius: 50%;
     border: 6px solid ${({ theme }) => theme.colors.jasmin};
-    border-color: #fff transparent #fff transparent;
+    border-color: ${({ theme }) => `${theme.colors.dahlia} ${theme.colors.jade} ${theme.colors.dahlia} ${theme.colors.jade}`};
     animation: lds-dual-ring 1.2s linear infinite;
   }
 
