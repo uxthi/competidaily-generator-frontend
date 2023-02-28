@@ -92,4 +92,13 @@ const Wrapper = styled.div`
   }
 `
 
-export { Wrapper, Container, Title,SubTitle, JadeText, StyledInput };
+const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 20px;
+  height: 10vh;
+`
+
+export { Wrapper, Container, Title, SubTitle, JadeText, StyledInput, ButtonWrapper };

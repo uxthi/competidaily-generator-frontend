@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.jade};
+const Container = styled.div`
+  min-width: 200px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const StyledButton = styled.button<{ color?: string }>`
+  background-color: ${({ theme, color }) => color === 'secondary' ? theme.colors.dahlia : theme.colors.jade};
   color: ${({ theme }) => theme.colors.jasmin};
   width: 200px;
   height: 50px;
@@ -10,11 +18,6 @@ const StyledButton = styled.button`
   font-size: 1.3rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 500ms ease-in-out, width 200ms ease-in-out, height 200ms ease-in-out, transform 200ms ease-in-out;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.dahlia};
-  }
 
   @media (max-width: 320px) {
     font-size: 1.2rem;
@@ -23,4 +26,4 @@ const StyledButton = styled.button`
   }
 `
 
-export default StyledButton;
+export {Container, StyledButton};

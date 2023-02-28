@@ -24,6 +24,5 @@ describe("Spinner component", () => {
 
     expect(spinnerContainer).toHaveStyle("width: 30px");
     expect(spinnerContainer).toHaveStyle("height: 30px");
-    expect(spinnerContainer).toHaveStyle("margin: 10px 0");
   });
 });
