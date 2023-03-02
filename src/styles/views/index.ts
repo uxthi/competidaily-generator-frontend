@@ -5,8 +5,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: ${({ theme }) => theme.colors.lupino};
 `;
 
@@ -71,10 +71,7 @@ const StyledInput = styled.textarea`
 
   @media (max-width: 480px) {
     height: 30vh;
-  }
-
-  @media (max-width: 320px) {
-    height: 30vh;
+    width: 80%;
   }
 `;
 
@@ -90,6 +87,14 @@ const Wrapper = styled.div`
   :last-child {
     justify-content: flex-start;
   }
+
+  @media (max-width: 768px) {
+    height: 40vh;
+  }
+
+  @media (max-width: 414px) {
+    height: 30vh;
+  }
 `
 
 const ButtonWrapper = styled.div`
@@ -99,6 +104,13 @@ const ButtonWrapper = styled.div`
   width: 50%;
   gap: 20px;
   height: 10vh;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
 `
 
 export { Wrapper, Container, Title, SubTitle, JadeText, StyledInput, ButtonWrapper };

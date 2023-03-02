@@ -2,6 +2,8 @@ import Button from "components/Button/Primary";
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import sendMail from "services/emailJs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Container,
   InputWrapper,
@@ -43,11 +45,12 @@ const Form = () => {
     try {
       const response = await sendMail(form.current);
       if (response === "success") {
-        console.log("Success!");
+        toast.success("Sugestão enviada, obrigado!");
         setIsLoading(false);
+        setFormValues({ ...formValues, theme: "" });
       }
     } catch (error) {
-      console.log("Error >>>>", error);
+      toast.error("Erro ao enviar sugestão, tente novamente mais tarde!");
       setIsLoading(false);
     }
   };
@@ -91,6 +94,7 @@ const Form = () => {
           Voltar
         </Button>
       </ButtonWrapper>
+      <ToastContainer />
     </Container>
   );
 };
