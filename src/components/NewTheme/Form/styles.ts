@@ -7,13 +7,14 @@ const Container = styled.form`
   padding: 30px;
 
   @media (max-width: 414px) {
-    outline: 1px solid pink;
     width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: 375px) {
-    outline: 1px solid pink;
-    height: 60vh;
+    height: 70vh;
   }
 `
 
@@ -31,6 +32,7 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 414px) {
     width: 100%;
+    flex-direction: column;
   }
 `
 
