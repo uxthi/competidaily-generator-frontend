@@ -12,7 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@next/font": "13.4.9",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
