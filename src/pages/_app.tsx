@@ -13,7 +13,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="description" content="Gerador de Competidaily!" />
         <link rel="preload" href="/content/normalize.css" as="style" />
         <link rel="preload" href="/content/common.css" as="style" />
-        <link rel="icon" href="/content/images/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
         <title>Gerador de Competidaily!</title>
       </Head>
       <Component {...pageProps} />
